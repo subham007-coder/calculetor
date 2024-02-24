@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(25, 25, 29);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-center {
+    color: rgb(0, 255, 251);
+    text-align: center;
+}
+
+.take-text {
+    width: 700px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+#rows {
+    margin-top: 30px;
+}
+
+.flex {
+    display: flex;
+
+}
+
+.flex-col {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 20px;
+    margin: 0 4px;
+    font-size: 25px;
+    background-color: rgb(3, 3, 3);
+    width: 260px;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#btn-e {
+    padding: 20px;
+    margin: 0 4px;
+    font-size: 25px;
+    background-color: rgb(255, 166, 0);
+    color: white;
+    width: 260px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#btn-g {
+    padding: 20px;
+    margin: 0 4px;
+    font-size: 25px;
+    background-color: rgb(0, 0, 0);
+    color: green;
+    width: 260px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media(min-width:300px) and (max-width:1086px) {
+    #btn-g {
+        width: 80px;
+    }
+}
+
+@media(min-width:300px) and (max-width:1086px) {
+    .btn {
+        width: 80px;
+    }
+}
+
+@media(min-width:300px) and (max-width:1086px) {
+    #btn-e {
+        width: 80px;
+    }
+}
+
+@media(min-width:300px) and (max-width:366px) {
+    #btn-e {
+        width: 60px;
+    }
+}
+
+@media(min-width:300px) and (max-width:366px) {
+    .btn {
+        width: 60px;
+    }
+}
+
+@media(min-width:300px) and (max-width:366px) {
+    #btn-g {
+        width: 70px;
+    }
+}
+
+@media(min-width:300px) and (max-width:733px) {
+    .take-text {
+        width: 300px;
+    }
+}
