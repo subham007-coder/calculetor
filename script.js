@@ -1,8 +1,3 @@
-// let name = prompt("what is your name?");
-// let nameShow = document.querySelector(".text-center");
-
-// nameShow.innerHTML = `Calculate Me ${name}!`;
-
 let string = "";
 let buttons = document.querySelectorAll('.button');
 Array.from(buttons).forEach((button)=>{
