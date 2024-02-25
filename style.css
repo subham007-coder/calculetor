@@ -1,118 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
+html,
 body {
-    background-color: rgb(25, 25, 29);
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
-.text-center {
-    color: rgb(0, 255, 251);
-    text-align: center;
+.button {
+  width: 66px;
+  padding: 20px;
+  margin: 0 3px;
+  border: 2px solid black;
+  border-radius: 9px;
+  cursor: pointer;
 }
 
-.take-text {
-    width: 700px;
-    height: 60px;
-    margin-top: 20px;
-    font-size: 25px;
-    border-radius: 10px;
+.row {
+  margin: 8px 0;
 }
 
-#rows {
-    margin-top: 30px;
+.row input {
+  width: 291px;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.flex {
-    display: flex;
-
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(185, 201, 232, 0.489);
 }
 
-.flex-col {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn {
-    padding: 20px;
-    margin: 0 4px;
-    font-size: 25px;
-    background-color: rgb(3, 3, 3);
-    width: 260px;
-    color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#btn-e {
-    padding: 20px;
-    margin: 0 4px;
-    font-size: 25px;
-    background-color: rgb(255, 166, 0);
-    color: white;
-    width: 260px;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#btn-g {
-    padding: 20px;
-    margin: 0 4px;
-    font-size: 25px;
-    background-color: rgb(0, 0, 0);
-    color: green;
-    width: 260px;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-@media(min-width:300px) and (max-width:1086px) {
-    #btn-g {
-        width: 80px;
-    }
-}
-
-@media(min-width:300px) and (max-width:1086px) {
-    .btn {
-        width: 80px;
-    }
-}
-
-@media(min-width:300px) and (max-width:1086px) {
-    #btn-e {
-        width: 80px;
-    }
-}
-
-@media(min-width:300px) and (max-width:366px) {
-    #btn-e {
-        width: 60px;
-    }
-}
-
-@media(min-width:300px) and (max-width:366px) {
-    .btn {
-        width: 60px;
-    }
-}
-
-@media(min-width:300px) and (max-width:366px) {
-    #btn-g {
-        width: 70px;
-    }
-}
-
-@media(min-width:300px) and (max-width:733px) {
-    .take-text {
-        width: 300px;
-    }
+.row button{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    box-shadow: 20px 20px 60px #00000041,inset -20px -20px 60px #ffffff42;
 }
