@@ -1,19 +1,35 @@
-let string = "";
-let buttons = document.querySelectorAll('.button');
-Array.from(buttons).forEach((button)=>{
-  button.addEventListener('click', (e)=>{
-    if(e.target.innerHTML == '='){
-      string = eval(string);
-      document.querySelector('input').value = string;
-    }
-    else if(e.target.innerHTML == 'AC'){
-      string = ""
-      document.querySelector('input').value = string;
-    }
-    else{ 
-    console.log(e.target)
-    string = string + e.target.innerHTML;
-    document.querySelector('input').value = string;
-      }
-  })
-})
+const input = document.querySelector(".container__input");
+const btn = document.querySelectorAll(".btn");
+const ac = document.getElementById("ac");
+const del = document.getElementById("del");
+const igual = document.getElementById("igual");
+
+let igualPresionado;
+
+btn.forEach((button) => {
+	button.addEventListener("click", () => {
+		if (igualPresionado) {
+			input.value = "";
+			igualPresionado = false;
+		}
+
+		input.value += button.innerHTML;
+	});
+});
+
+del.addEventListener("click", () => {
+	let eliminar = input.value.slice(0, -1);
+	input.value = eliminar;
+});
+
+ac.addEventListener("click", () => {
+	input.value = "";
+});
+
+igual.addEventListener("click", () => {
+	if (input.value.trim() !== "") {
+		let resultado = eval(input.value);
+		input.value = resultado;
+		igualPresionado = true;
+	}
+});

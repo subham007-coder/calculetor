@@ -1,77 +1,198 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap");
+@charset "UTF-8";
 
+:root {
+	--negro: #393939;
+	--tipo-principal: Helvetica, Arial, sans-serif;
+	--tipo-secundaria: Verdana;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--negro: #ececec;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	* {
+		-webkit-animation: none !important;
+		animation: none !important;
+		-webkit-transition: none !important;
+		transition: none !important;
+	}
+}
 * {
-  padding: 0;
-  margin: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: baseline;
+}
+img,
+picture,
+video,
+iframe,
+figure {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center center;
+	object-position: center center;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
 }
 
-html,
+p a {
+	display: inline;
+}
+
+li {
+	list-style-type: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+	font-size: 1em;
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+::-moz-selection {
+	background-color: var(--negro);
+	color: var(--blanco);
+}
+::selection {
+	background-color: var(--negro);
+	color: var(--blanco);
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	background-color: transparent;
+	display: block;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+table,
+tr,
+td {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+svg {
+	width: 100%;
+	display: block;
+	fill: currentColor;
+}
 body {
-  height: 100%;
-  width: 100%;
-  font-family: "Roboto", sans-serif;
+	min-height: 100vh;
+	font-size: 100%;
+	font-family: var(--tipo-principal);
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.button {
-  width: 66px;
-  padding: 20px;
-  margin: 0 3px;
-  border: 2px solid black;
-  border-radius: 9px;
-  cursor: pointer;
-}
-
-.row {
-  margin: 8px 0;
-}
-
-.row input {
-  width: 291px;
-  font-size: 20px;
-  margin: 0;
-  padding: 10px 10px;
-  border: 2px solid black;
-  border-radius: 5px;
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0 20px;
+	background-color: #202023;
+	font-family: sans-serif;
 }
 
 .container {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
+	padding: 20px;
+	width: 300px;
+	background-color: #262c33;
+	border-radius: 7px;
+	box-shadow: 0 0 4px 0 white;
 }
 
-.row button{
-    width: 50px;
-    height: 50px;
-    border: 0;
-    font-weight: 600;
-    box-shadow: 20px 20px 60px #00000040,inset -20px -20px 60px #ffffff46;
+.container__input {
+	width: 100%;
+	height: 70px;
+	margin-bottom: 20px;
+	font-size: 30px;
+	color: #fff;
+	text-align: end;
+	letter-spacing: 2px;
+	outline: none;
 }
 
-.row button:hover{
-  opacity: 0.7;
+.container__input::placeholder {
+	color: #fff;
 }
 
-.row input{
-  border: 0.1px solid rgba(0, 0, 0, 0.189);
+.buttons {
+	display: grid;
+	gap: 15px;
+	grid-template-columns: repeat(4, 1fr);
 }
 
-.row .orange{
-  background-color: orange;
-  font-size: medium;
-  font-weight: 600;
-  color: #fff;
+button {
+	max-width: 60px;
+	height: 55px;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 50%;
+	box-shadow: -2px -2px 7px 0 #8b8b8b, 2px 2px 7px 0 #000;
+	cursor: pointer;
 }
 
-.row .gray{
-  background-color: rgba(128, 128, 128, 0.397);
-  font-size: medium;
-  font-weight: 600;
+.verde {
+	color: #28e;
 }
 
-.row .black{
-  background-color: rgb(31, 30, 30);
-  font-size: medium;
-  color: #fff;
-  font-weight: 600;
+#igual {
+	background-color: #28e;
 }
